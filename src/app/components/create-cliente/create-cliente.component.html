@@ -1,0 +1,44 @@
+<div class="conatiner pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Agregar Cliente</h3>
+                    <span *ngIf="submitted && createCliente.invalid" >TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form  class="mt-4" [formGroup]="createCliente" (ngSubmit)="agregarCliente()">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" 
+                                class="form-control form-control-lg" 
+                                placeholder="Nombre"
+                                formControlName="nombre"
+                                >
+                            </div>
+                            <div class="col">
+                                <input type="text" 
+                                class="form-control form-control-lg" 
+                                placeholder="Apellido"
+                                formControlName="apellido"
+                                >
+                            </div>
+
+                        </div>
+                        <input type="text" class="form-control form-control-lg mt-3" formControlName="edad" placeholder="Edad">
+                        <input type="text" class="form-control form-control-lg mt-3" formControlName="fecha" placeholder="Fecha de Nacimiento">
+                        <div class="mt-3">
+                            <button type="text" class="btn btn-secondary btn-lg" routerLink = "/list-clientes">Volver</button>
+                            <span>  ... </span>
+                            <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
+
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
